@@ -1,0 +1,41 @@
+@use '../utils/variables' as *;
+@use '../utils/fonts' as *;
+
+.header {
+	padding-top: 17px;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__list {
+		display: flex;
+		gap: 55px;
+	}
+
+	&__link {
+		color: $navigation-text-color;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: auto;
+		letter-spacing: 0;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $hover-color;
+			padding-bottom: 10px;
+			border-bottom: 3px solid;
+			border-color: $hover-color;
+		}
+	}
+
+	&__logo {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 100%;
+		letter-spacing: 0%;
+		color: $navigation-text-color;
+	}
+}
