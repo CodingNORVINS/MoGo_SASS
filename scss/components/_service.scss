@@ -6,25 +6,25 @@
 	padding-bottom: 100px;
 
 	&__container {
+		flex-wrap: wrap;
+		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
-		margin: 0 auto;
-		flex-wrap: wrap;
 	}
 
 	&__list {
-		display: flex;
-		flex-wrap: wrap;
-		row-gap: 100px;
-		column-gap: 70px;
 		justify-content: center;
+		flex-wrap: wrap;
+		display: flex;
+		column-gap: 70px;
+		row-gap: 100px;
 	}
 
 	&__icon {
 		fill: $navigation-text-color;
 
 		&:hover {
-			fill: $hover-color;
+			fill: $hover-text-color;
 		}
 	}
 
@@ -32,36 +32,36 @@
 		flex-basis: calc((100% - 200px) / 3);
 	}
 
-	&__card {
+	&__article {
 		display: flex;
 	}
 
 	&__title {
-		color: $title-color;
-		font-variant: small-caps;
-		font-size: 14px;
 		font-weight: 400;
-		letter-spacing: 0;
-		line-height: auto;
 		padding-left: 20px;
+		color: $title-color;
+		line-height: auto;
+		font-size: 14px;
+		font-variant: small-caps;
+		letter-spacing: 0;
 	}
 
-	&__text {
-		color: $paragraph-color;
-		font-size: 15px;
-		font-family: 'Roboto', sans-serif;
-		letter-spacing: 0;
-		line-height: 22px;
-		font-weight: 400;
+	&__description {
 		padding-left: 19px;
-		padding-top: 20px;
 		width: 310px;
+		font-family: 'Roboto', sans-serif;
+		color: $paragraph-color;
+		line-height: 22px;
+		padding-top: 20px;
+		font-weight: 400;
+		letter-spacing: 0;
+		font-size: 15px;
 	}
 
 	&__icon {
-		padding-top: 3px;
 		width: 37px;
 		height: 37px;
+		padding-top: 3px;
 	}
 }
 

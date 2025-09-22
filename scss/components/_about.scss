@@ -6,16 +6,16 @@
 	padding-bottom: 80px;
 
 	&__description {
-		padding-bottom: 27px;
-		padding-left: 48px;
-		padding-right: 48px;
-		flex-wrap: wrap;
-		color: $paragraph-color;
-		font-family: 'Roboto', sans-serif;
 		font-size: 15px;
-		font-weight: 400;
 		line-height: auto;
+		padding-right: 48px;
+		font-weight: 400;
+		padding-bottom: 27px;
+		color: $paragraph-color;
+		flex-wrap: wrap;
 		letter-spacing: 0;
+		padding-left: 48px;
+		font-family: 'Roboto', sans-serif;
 	}
 
 	&__list {
@@ -24,25 +24,25 @@
 	}
 
 	&__name {
-		color: $title-color;
-		font-size: 14px;
-		font-variant: small-caps;
-		font-weight: 400;
-		letter-spacing: 0;
-		line-height: auto;
 		padding-bottom: 11px;
 		padding-top: 30px;
+		letter-spacing: 0;
+		line-height: auto;
+		font-weight: 400;
+		font-size: 14px;
+		color: $title-color;
+		font-variant: small-caps;
 	}
 
 	&__role {
-		font-size: 15px;
+		font-style: italic;
+		margin: 0;
+		font-family: 'Roboto', sans-serif;
+		color: $paragraph-color;
 		font-weight: 300;
 		line-height: auto;
 		letter-spacing: 0;
-		font-family: 'Roboto', sans-serif;
-		margin: 0 0 0 0;
-		font-style: italic;
-		color: $paragraph-color;
+		font-size: 15px;
 	}
 
 	&__article {

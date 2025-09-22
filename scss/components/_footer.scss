@@ -6,22 +6,22 @@
 	padding-bottom: 10px;
 
 	&__container {
-		padding-top: 10px;
 		display: flex;
+		border-top-style: solid;
 		justify-content: space-between;
 		align-items: center;
-		border-top-width: 1px;
+		padding-top: 10px;
 		border-top-color: $paragraph-color;
-		border-top-style: solid;
+		border-top-width: 1px;
 	}
 
-	&__copyright {
+	&__description {
 		@extend %footer-text;
 		color: $footer-description-color;
 	}
 
 	&__link {
-		color: $hover-color;
+		color: $hover-text-color;
 	}
 
 	&__form {
@@ -29,28 +29,28 @@
 	}
 
 	&__input {
-		color: $paragraph-color;
-		font-family: 'Roboto', sans-serif;
 		font-style: italic;
-		font-size: 14px;
-		font-weight: 300;
-		line-height: auto;
-		letter-spacing: 0;
 		border-width: 1px;
+		font-family: 'Roboto', sans-serif;
+		line-height: auto;
 		border-color: $paragraph-color;
-		border-style: solid;
+		color: $paragraph-color;
 		padding: 12px 145px 11px 10px;
+		font-weight: 300;
+		font-size: 14px;
+		letter-spacing: 0;
+		border-style: solid;
 	}
 
 	&__button {
-		padding: 11px 38px 12px 38px;
-		font-variant: small-caps;
-		font-weight: 700;
 		font-size: 14px;
+		padding: 11px 38px 12px 38px;
+		border-width: 0;
 		color: $background-color;
-		background-color: $navigation-text-color;
+		font-weight: 700;
+		font-variant: small-caps;
 		line-height: auto;
 		letter-spacing: 0;
-		border-width: 0;
+		background-color: $navigation-text-color;
 	}
 }

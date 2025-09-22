@@ -23,31 +23,31 @@ body {
 }
 
 .title {
-	text-align: center;
-	color: $title-color;
 	font-weight: 700;
+	line-height: 100%;
+	color: $title-color;
+	font-variant: small-caps;
+	text-align: center;
 	font-size: 30px;
 	letter-spacing: 0%;
-	line-height: 100%;
-	font-variant: small-caps;
 
 	&::after {
-		display: block;
-		content: '';
 		width: 60px;
+		content: '';
+		background-color: $hover-text-color;
+		display: block;
 		height: 4px;
-		background-color: $hover-color;
 		margin: 0 auto;
 	}
 }
 
 .subtitle {
 	text-align: center;
-	padding-bottom: 17px;
+	line-height: 100%;
+	font-weight: 400;
+	padding-bottom: 20px;
 	color: $title-color;
+	letter-spacing: 0%;
 	font-family: 'Kaushan Script', sans-serif;
 	font-size: 24px;
-	font-weight: 400;
-	line-height: 100%;
-	letter-spacing: 0%;
 }

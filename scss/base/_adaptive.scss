@@ -3,7 +3,7 @@
 @use '../utils/fonts' as *;
 
 @media (max-width: 393px) {
-	.menu__btn {
+	.burger-menu__button {
 		display: inline-block;
 	}
 
@@ -13,33 +13,33 @@
 	}
 
 	.title {
-		text-align: center;
-		color: $title-color;
 		font-weight: 700;
-		font-size: 24px;
-		letter-spacing: 0;
 		line-height: 100%;
+		text-align: center;
 		font-variant: small-caps;
+		font-size: 24px;
+		color: $title-color;
+		letter-spacing: 0%;
 
 		&::after {
+			width: 20px;
+			margin: 0 auto;
 			display: block;
 			content: '';
-			width: 20px;
+			background-color: $hover-text-color;
 			height: 2px;
-			background-color: $hover-color;
-			margin: 0 auto;
 		}
 	}
 
 	.subtitle {
-		text-align: center;
-		padding-bottom: 10px;
-		color: $title-color;
 		font-family: 'Kaushan Script', sans-serif;
-		font-size: 18px;
 		font-weight: 400;
+		text-align: center;
+		font-size: 18px;
+		padding-bottom: 10px;
 		line-height: 100%;
-		letter-spacing: 0;
+		color: $title-color;
+		letter-spacing: 0%;
 	}
 
 	.header {
@@ -52,32 +52,37 @@
 		}
 
 		&__list {
-			display: none;
+			display: flex;
 			gap: 55px;
+			display: none;
 		}
 
 		&__link {
+			letter-spacing: 0;
+			font-size: 14px;
+			line-height: auto;
+			text-transform: uppercase;
 			color: $navigation-text-color;
 			font-weight: 400;
-			font-size: 14px;
-			text-transform: uppercase;
 
 			&:hover {
-				color: $hover-color;
+				border-bottom: 3px solid;
 				padding-bottom: 10px;
-				border-bottom: 3px solid $hover-color;
+				color: $hover-text-color;
+				border-color: $hover-text-color;
 			}
 		}
 
 		&__logo {
-			font-size: 30px;
 			font-weight: 700;
 			line-height: 100%;
+			font-size: 30px;
 			color: $navigation-text-color;
+			letter-spacing: 0%;
 		}
 	}
 
-	.hero {
+	.service {
 		padding-top: 38px;
 		padding-bottom: 70px;
 
@@ -85,6 +90,7 @@
 			display: flex;
 			flex-direction: column;
 			margin: 0 auto;
+			flex-wrap: wrap;
 		}
 
 		&__list {
@@ -103,31 +109,35 @@
 		}
 
 		&__title {
+			line-height: auto;
+			font-weight: 400;
+			font-size: 18px;
+			padding-left: 20px;
+			letter-spacing: 0;
 			color: $title-color;
 			font-variant: small-caps;
-			font-size: 18px;
-			font-weight: 400;
-			padding-left: 20px;
 		}
 
-		&__desc {
-			color: $paragraph-color;
-			font-size: 15px;
-			font-family: 'Roboto', sans-serif;
-			line-height: 22px;
-			padding-left: 19px;
+		&__description {
+			font-weight: 400;
 			padding-top: 20px;
+			padding-left: 19px;
+			letter-spacing: 0;
+			font-size: 15px;
 			width: 310px;
+			font-family: 'Roboto', sans-serif;
+			color: $paragraph-color;
+			line-height: 22px;
 		}
 
 		&__icon {
+			height: 37px;
 			padding-top: 3px;
 			width: 37px;
-			height: 37px;
 		}
 	}
 
-	.title--hero::after {
+	.title--service::after {
 		margin-top: 40px;
 		margin-bottom: 65px;
 	}
@@ -137,12 +147,16 @@
 		padding-bottom: 80px;
 
 		&__description {
-			padding: 0 48px 27px;
-			color: $paragraph-color;
-			font-family: 'Roboto', sans-serif;
 			font-size: 12px;
-			font-weight: 400;
 			line-height: auto;
+			padding-left: 48px;
+			letter-spacing: 0;
+			color: $paragraph-color;
+			padding-bottom: 27px;
+			font-family: 'Roboto', sans-serif;
+			padding-right: 48px;
+			flex-wrap: wrap;
+			font-weight: 400;
 		}
 
 		&__list {
@@ -151,19 +165,26 @@
 			gap: 30px;
 		}
 
-		&__name {
-			color: $title-color;
-			font-size: 14px;
+		&__title {
+			line-height: auto;
 			font-variant: small-caps;
+			padding-top: 30px;
 			font-weight: 400;
-			padding: 30px 0 11px 0;
+			padding-bottom: 11px;
+			color: $title-color;
+			letter-spacing: 0;
+			font-size: 14px;
 		}
 
 		&__role {
-			font-size: 12px;
-			font-weight: 300;
 			font-style: italic;
+			letter-spacing: 0;
+			font-weight: 300;
+			margin: 0;
 			color: $paragraph-color;
+			line-height: auto;
+			font-family: 'Roboto', sans-serif;
+			font-size: 12px;
 		}
 
 		&__article {
@@ -174,26 +195,23 @@
 			}
 		}
 
-		&__img {
+		&__image {
 			width: 260px;
 			height: 300px;
 		}
 
 		&__overlay {
-			display: none;
+			position: absolute;
 			width: 260px;
 			height: 300px;
-			background: linear-gradient(
+			display: none;
+			background-image: linear-gradient(
 				to bottom,
 				rgba(239, 139, 138, 0.8),
 				rgba(229, 207, 130, 0.8)
 			);
-			position: absolute;
-			top: 0;
-			left: 0;
 		}
 	}
-
 	.title--about::after {
 		margin-top: 16px;
 		margin-bottom: 15px;
@@ -203,28 +221,37 @@
 		padding-bottom: 10px;
 
 		&__description {
+			letter-spacing: 0;
+			font-weight: 400;
 			font-size: 8px;
+			line-height: auto;
 			color: $footer-description-color;
 		}
 
 		&__input {
-			color: $paragraph-color;
-			font-family: 'Roboto', sans-serif;
+			border-width: 1px;
 			font-style: italic;
-			font-size: 10px;
+			font-family: 'Roboto', sans-serif;
+			border-style: solid;
+			line-height: auto;
 			font-weight: 300;
-			border: 1px solid $paragraph-color;
 			padding: 12px 75px 11px 10px;
+			border-color: $paragraph-color;
+			font-size: 10px;
+			color: $paragraph-color;
+			letter-spacing: 0;
 		}
 
 		&__button {
-			padding: 8px 25px 9px;
 			font-variant: small-caps;
-			font-weight: 700;
-			font-size: 10px;
+			padding: 8px 25px 9px 25px;
+			border-width: 0;
 			color: $background-color;
+			line-height: auto;
+			font-size: 10px;
+			letter-spacing: 0;
 			background-color: $navigation-text-color;
-			border: 0;
+			font-weight: 700;
 		}
 
 		&__container {
@@ -238,16 +265,26 @@
 		width: 960px;
 	}
 
-	.hero__list,
-	.about__list {
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 40px;
-	}
+	.service {
+		&__list {
+			row-gap: 50px;
+			flex-wrap: wrap;
+			column-gap: 40px;
+		}
 
-	.hero__item,
-	.about__item {
-		width: 45%;
+		&__item {
+			width: 45%;
+		}
+	}
+	.about {
+		&__list {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		&__item {
+			width: 45%;
+		}
 	}
 }
 
@@ -256,29 +293,35 @@
 		width: 750px;
 	}
 
-	.header__list {
-		gap: 30px;
+	.header {
+		&__list {
+			gap: 30px;
+		}
+	}
+	.service {
+		&__list {
+			column-gap: 30px;
+			justify-content: center;
+			row-gap: 40px;
+			flex-wrap: wrap;
+		}
 	}
 
-	.hero__list {
-		row-gap: 40px;
-		column-gap: 30px;
-		justify-content: center;
-	}
+	.about {
+		&__list {
+			display: flex;
+			justify-content: center;
+			gap: 30px;
+		}
 
-	.about__list {
-		display: flex;
-		gap: 30px;
-		justify-content: center;
-	}
+		&__image {
+			width: 320px;
+		}
 
-	.about__img {
-		width: 320px;
-	}
-
-	.about__overlay {
-		width: 320px;
-		height: 396px;
+		&__overlay {
+			width: 320px;
+			height: 396px;
+		}
 	}
 
 	.footer__container {
