@@ -229,11 +229,13 @@ body {
   line-height: auto;
   border-color: rgb(182, 182, 182);
   color: rgb(182, 182, 182);
-  padding: 12px 145px 11px 10px;
+  padding: 12px 0px 11px 10px;
   font-weight: 300;
   font-size: 14px;
   letter-spacing: 0;
   border-style: solid;
+  width: 230px;
+  border-right: none;
 }
 .footer__button {
   font-size: 14px;
@@ -284,8 +286,8 @@ body {
   fill: rgb(243, 129, 129);
 }
 .service__item {
-  -ms-flex-preferred-size: calc((100% - 200px) / 3);
-      flex-basis: calc((100% - 200px) / 3);
+  -ms-flex-preferred-size: calc((100% - 140px) / 3);
+      flex-basis: calc((100% - 140px) / 3);
 }
 .service__article {
   display: -webkit-box;
@@ -315,7 +317,6 @@ body {
 .service__icon {
   width: 37px;
   height: 37px;
-  padding-top: 3px;
 }
 
 .title--service::after {
@@ -325,6 +326,7 @@ body {
 
 .header {
   padding-top: 17px;
+  padding-bottom: 10px;
 }
 .header__container {
   -webkit-box-align: center;
@@ -673,7 +675,6 @@ body {
   }
   .service__icon {
     height: 37px;
-    padding-top: 3px;
     width: 37px;
   }
   .title--service::after {
