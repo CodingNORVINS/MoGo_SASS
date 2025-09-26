@@ -3,12 +3,8 @@
 @use '../utils/fonts' as *;
 
 @media (max-width: 393px) {
-	.burger-menu__button {
-		display: inline-block;
-	}
-
 	.container {
-		width: 340px;
+		max-width: 340px;
 		margin: 0 auto;
 	}
 
@@ -95,7 +91,6 @@
 
 		&__list {
 			display: flex;
-			flex-wrap: wrap;
 			column-gap: 50px;
 			justify-content: center;
 		}
@@ -230,10 +225,11 @@
 		&__input {
 			border-width: 1px;
 			font-style: italic;
-			font-family: 'Roboto', sans-serif;
+			font-family: 'Ro			width: 230px;boto', sans-serif;
 			border-style: solid;
 			line-height: auto;
 			font-weight: 300;
+
 			padding: 12px 75px 11px 10px;
 			border-color: $paragraph-color;
 			font-size: 10px;
@@ -259,37 +255,9 @@
 	}
 }
 
-@media (max-width: 992px) {
-	.container {
-		width: 960px;
-	}
-
-	.service {
-		&__list {
-			row-gap: 50px;
-			flex-wrap: wrap;
-			column-gap: 40px;
-		}
-
-		&__item {
-			width: 45%;
-		}
-	}
-	.about {
-		&__list {
-			flex-wrap: wrap;
-			justify-content: center;
-		}
-
-		&__item {
-			width: 45%;
-		}
-	}
-}
-
 @media (max-width: 768px) {
 	.container {
-		width: 750px;
+		max-width: 750px;
 	}
 
 	.header {
@@ -313,10 +281,6 @@
 			gap: 30px;
 		}
 
-		&__image {
-			width: 320px;
-		}
-
 		&__overlay {
 			width: 320px;
 			height: 396px;
@@ -326,5 +290,35 @@
 	.footer__container {
 		flex-direction: column;
 		gap: 10px;
+	}
+
+	.footer {
+		&__input {
+			max-width: 230px;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+
+	.service {
+		&__list {
+			row-gap: 50px;
+			flex-wrap: wrap;
+			column-gap: 40px;
+		}
+	}
+	.about {
+		&__list {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		&__item {
+			width: 45%;
+		}
 	}
 }

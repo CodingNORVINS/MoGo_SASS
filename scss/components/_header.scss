@@ -40,3 +40,14 @@
 		line-height: 100%;
 	}
 }
+
+@media (max-width: 768px) {
+	.header {
+		&__list {
+			display: none;
+		}
+	}
+	.burger-menu__button {
+		display: inline-block;
+	}
+}

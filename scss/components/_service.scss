@@ -20,14 +20,6 @@
 		row-gap: 100px;
 	}
 
-	&__icon {
-		fill: $navigation-text-color;
-
-		&:hover {
-			fill: $hover-text-color;
-		}
-	}
-
 	&__item {
 		flex-basis: calc((100% - 140px) / 3);
 	}
@@ -52,7 +44,6 @@
 		font-family: 'Roboto', sans-serif;
 		color: $paragraph-color;
 		line-height: 22px;
-		padding-top: 20px;
 		font-weight: 400;
 		letter-spacing: 0;
 		font-size: 15px;

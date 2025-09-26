@@ -32,19 +32,22 @@
 				</nav>
 
 				<div class="burger-menu__button">
-					<span></span>
-					<span></span>
-					<span></span>
+					<svg class="burger-menu__svg">
+						<use href="./images/symbol-defs.svg#burger-menu"></use>
+					</svg>
 				</div>
 
 				<div class="burger-menu">
+					<div class="burger-menu__close">
+						<button class="close-burger-menu">✕</button>
+					</div>
 					<nav class="header__navigation">
 						<ul class="burger-menu__list">
 							<li class="burger-menu__item">
 								<a href="#" class="menu__link">About</a>
 							</li>
 							<li class="burger-menu__item">
-								<a href="#" class="burger-menu__link">Service</a>
+								<a href="#" class="menu__link">Service</a>
 							</li>
 							<li class="burger-menu__item">
 								<a href="#" class="menu__link">Work</a>
@@ -54,6 +57,11 @@
 							</li>
 							<li class="burger-menu__item">
 								<a href="#" class="menu__link">Contacts</a>
+							</li>
+							<li class="burger-menu__item burger-menu__logo">
+								<a href="index.html"
+									><p class="burger__logo burger__logo--animation">MoGo</p>
+								</a>
 							</li>
 						</ul>
 					</nav>
@@ -140,7 +148,7 @@
 						<li class="service__item">
 							<article class="service__article">
 								<svg class="service__icon">
-									<use href="./images/symbol-defs.svg#icon-home"></use>
+									<use href="./images/symbol-defs.svg#icon-marketing"></use>
 								</svg>
 								<div class="service__wrapper">
 									<h3 class="service__title">photography</h3>
