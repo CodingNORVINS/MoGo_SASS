@@ -643,6 +643,7 @@ body {
 @media (max-width: 393px) {
   .container {
     max-width: 340px;
+    max-width: 340px;
     margin: 0 auto;
   }
   .title {
@@ -867,6 +868,7 @@ body {
 }
 @media (max-width: 768px) {
   .container {
+    max-width: 750px;
     max-width: 750px;
   }
   .header__list {
