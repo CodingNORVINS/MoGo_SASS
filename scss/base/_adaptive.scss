@@ -3,12 +3,8 @@
 @use '../utils/fonts' as *;
 
 @media (max-width: 393px) {
-	.burger-menu__button {
-		display: inline-block;
-	}
-
 	.container {
-		width: 340px;
+		max-width: 340px;
 		margin: 0 auto;
 	}
 
@@ -19,15 +15,15 @@
 		font-variant: small-caps;
 		font-size: 24px;
 		color: $title-color;
-		letter-spacing: 0%;
+		letter-spacing: 0;
 
 		&::after {
-			width: 20px;
-			margin: 0 auto;
-			display: block;
 			content: '';
-			background-color: $hover-text-color;
+			display: block;
+			width: 20px;
 			height: 2px;
+			margin: 0 auto;
+			background-color: $hover-text-color;
 		}
 	}
 
@@ -39,7 +35,6 @@
 		padding-bottom: 10px;
 		line-height: 100%;
 		color: $title-color;
-		letter-spacing: 0%;
 	}
 
 	.header {
@@ -52,13 +47,11 @@
 		}
 
 		&__list {
-			display: flex;
-			gap: 55px;
 			display: none;
+			gap: 55px;
 		}
 
 		&__link {
-			letter-spacing: 0;
 			font-size: 14px;
 			line-height: auto;
 			text-transform: uppercase;
@@ -66,10 +59,9 @@
 			font-weight: 400;
 
 			&:hover {
-				border-bottom: 3px solid;
+				border-bottom: 3px solid $hover-text-color;
 				padding-bottom: 10px;
 				color: $hover-text-color;
-				border-color: $hover-text-color;
 			}
 		}
 
@@ -78,13 +70,11 @@
 			line-height: 100%;
 			font-size: 30px;
 			color: $navigation-text-color;
-			letter-spacing: 0%;
 		}
 	}
 
 	.service {
-		padding-top: 38px;
-		padding-bottom: 70px;
+		padding: 38px 0 70px;
 
 		&__container {
 			display: flex;
@@ -95,9 +85,8 @@
 
 		&__list {
 			display: flex;
-			flex-wrap: wrap;
-			column-gap: 50px;
 			justify-content: center;
+			column-gap: 50px;
 		}
 
 		&__item {
@@ -106,39 +95,36 @@
 
 		&__article {
 			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 
 		&__title {
-			line-height: auto;
 			font-weight: 400;
-			font-size: 18px;
-			padding-left: 20px;
-			letter-spacing: 0;
+			font-size: 15px;
+			padding: 0 0 10px 10px;
 			color: $title-color;
 			font-variant: small-caps;
 		}
 
 		&__description {
 			font-weight: 400;
-			padding-top: 20px;
-			padding-left: 19px;
-			letter-spacing: 0;
 			font-size: 15px;
 			width: 310px;
+			padding: 0 0 0 10px;
 			font-family: 'Roboto', sans-serif;
 			color: $paragraph-color;
 			line-height: 22px;
 		}
 
 		&__icon {
-			height: 37px;
 			width: 37px;
+			height: 37px;
 		}
 	}
 
 	.title--service::after {
-		margin-top: 40px;
-		margin-bottom: 65px;
+		margin: 40px auto 65px;
 	}
 
 	.about {
@@ -148,42 +134,32 @@
 		&__description {
 			font-size: 12px;
 			line-height: auto;
-			padding-left: 48px;
-			letter-spacing: 0;
-			color: $paragraph-color;
-			padding-bottom: 27px;
-			font-family: 'Roboto', sans-serif;
-			padding-right: 48px;
-			flex-wrap: wrap;
+			padding: 0 48px 27px;
 			font-weight: 400;
+			color: $paragraph-color;
+			font-family: 'Roboto', sans-serif;
 		}
 
 		&__list {
 			display: flex;
-			flex-direction: column;
 			gap: 30px;
 		}
 
 		&__title {
-			line-height: auto;
 			font-variant: small-caps;
-			padding-top: 30px;
 			font-weight: 400;
-			padding-bottom: 11px;
-			color: $title-color;
-			letter-spacing: 0;
 			font-size: 14px;
+			padding: 30px 0 11px;
+			color: $title-color;
 		}
 
 		&__role {
 			font-style: italic;
-			letter-spacing: 0;
 			font-weight: 300;
+			font-size: 12px;
 			margin: 0;
 			color: $paragraph-color;
-			line-height: auto;
 			font-family: 'Roboto', sans-serif;
-			font-size: 12px;
 		}
 
 		&__article {
@@ -200,10 +176,10 @@
 		}
 
 		&__overlay {
-			position: absolute;
-			width: 260px;
-			height: 300px;
 			display: none;
+			position: absolute;
+			width: 100%;
+			height: 100%;
 			background-image: linear-gradient(
 				to bottom,
 				rgba(239, 139, 138, 0.8),
@@ -211,46 +187,43 @@
 			);
 		}
 	}
+
 	.title--about::after {
-		margin-top: 16px;
-		margin-bottom: 15px;
+		margin: 16px auto 15px;
 	}
 
 	.footer {
 		padding-bottom: 10px;
 
+		&__form {
+			justify-content: center;
+		}
 		&__description {
-			letter-spacing: 0;
-			font-weight: 400;
 			font-size: 8px;
-			line-height: auto;
+			font-weight: 400;
+			letter-spacing: 0;
 			color: $footer-description-color;
 		}
 
 		&__input {
-			border-width: 1px;
-			font-style: italic;
 			font-family: 'Roboto', sans-serif;
-			border-style: solid;
-			line-height: auto;
+			font-style: italic;
 			font-weight: 300;
-			padding: 12px 75px 11px 10px;
-			border-color: $paragraph-color;
 			font-size: 10px;
 			color: $paragraph-color;
-			letter-spacing: 0;
+			border: 1px solid $paragraph-color;
+			padding: 12px 20px;
+			width: 100%;
 		}
 
 		&__button {
 			font-variant: small-caps;
-			padding: 8px 25px 9px 25px;
-			border-width: 0;
-			color: $background-color;
-			line-height: auto;
-			font-size: 10px;
-			letter-spacing: 0;
-			background-color: $navigation-text-color;
 			font-weight: 700;
+			font-size: 10px;
+			padding: 8px 25px 9px;
+			background-color: $navigation-text-color;
+			color: $background-color;
+			border: none;
 		}
 
 		&__container {
@@ -259,72 +232,55 @@
 	}
 }
 
-@media (max-width: 992px) {
-	.container {
-		width: 960px;
-	}
-
-	.service {
-		&__list {
-			row-gap: 50px;
-			flex-wrap: wrap;
-			column-gap: 40px;
-		}
-
-		&__item {
-			width: 45%;
-		}
-	}
-	.about {
-		&__list {
-			flex-wrap: wrap;
-			justify-content: center;
-		}
-
-		&__item {
-			width: 45%;
-		}
-	}
-}
-
 @media (max-width: 768px) {
 	.container {
-		width: 750px;
+		max-width: 750px;
 	}
 
-	.header {
-		&__list {
-			gap: 30px;
-		}
-	}
-	.service {
-		&__list {
-			column-gap: 30px;
-			justify-content: center;
-			row-gap: 40px;
-			flex-wrap: wrap;
-		}
+	.header__list {
+		gap: 30px;
 	}
 
-	.about {
-		&__list {
-			display: flex;
-			justify-content: center;
-			gap: 30px;
-		}
+	.service__list {
+		column-gap: 30px;
+		row-gap: 40px;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
 
-		&__image {
-			width: 320px;
-		}
-
-		&__overlay {
-			width: 320px;
-			height: 396px;
-		}
+	.about__list {
+		display: flex;
+		justify-content: center;
+		gap: 30px;
 	}
 
 	.footer__container {
 		flex-direction: column;
 		gap: 10px;
+	}
+
+	.footer__input {
+		max-width: 230px;
+	}
+}
+
+@media (max-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+
+	.service__list {
+		column-gap: 40px;
+		row-gap: 50px;
+		flex-wrap: wrap;
+	}
+
+	.about__list {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.about__item {
+		width: 45%;
 	}
 }

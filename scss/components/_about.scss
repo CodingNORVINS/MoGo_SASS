@@ -7,65 +7,89 @@
 
 	&__description {
 		font-size: 15px;
-		line-height: auto;
-		padding-right: 48px;
+		line-height: 1.6;
+		padding: 0 48px 27px;
 		font-weight: 400;
-		padding-bottom: 27px;
 		color: $paragraph-color;
-		flex-wrap: wrap;
 		letter-spacing: 0;
-		padding-left: 48px;
 		font-family: 'Roboto', sans-serif;
 	}
 
 	&__list {
 		display: flex;
-		gap: 30px;
-	}
-
-	&__name {
-		padding-bottom: 11px;
-		padding-top: 30px;
-		letter-spacing: 0;
-		line-height: auto;
-		font-weight: 400;
-		font-size: 14px;
-		color: $title-color;
-		font-variant: small-caps;
-	}
-
-	&__role {
-		font-style: italic;
+		flex-wrap: wrap;
+		gap: 15px;
+		justify-content: center;
+		align-items: flex-start;
+		padding: 0;
 		margin: 0;
-		font-family: 'Roboto', sans-serif;
-		color: $paragraph-color;
-		font-weight: 300;
-		line-height: auto;
-		letter-spacing: 0;
-		font-size: 15px;
+	}
+
+	&__item {
+		min-width: 250px;
 	}
 
 	&__article {
 		position: relative;
+		display: inline-block;
+	}
+
+	&__image-wrapper {
+		position: relative;
+		display: inline-block;
 
 		&:hover .about__overlay {
 			display: block;
 		}
 	}
 
+	&__image {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+
 	&__overlay {
 		display: none;
-		width: 380px;
-		height: 470px;
+		position: absolute;
+		top: -10px;
+		left: -10px;
+		width: 100%;
+		height: 100%;
 		background-image: linear-gradient(
 			to bottom,
 			rgba(239, 139, 138, 0.8),
 			rgba(229, 207, 130, 0.8)
 		);
-		position: absolute;
+		z-index: 2;
+	}
+
+	&__name {
+		padding: 30px 0 11px;
+		font-size: 14px;
+		font-variant: small-caps;
+		font-weight: 400;
+		color: $title-color;
+		letter-spacing: 0;
+	}
+
+	&__role {
+		font-style: italic;
+		font-weight: 300;
+		font-size: 15px;
+		line-height: 1.4;
+		color: $paragraph-color;
+		font-family: 'Roboto', sans-serif;
+		margin: 0;
+		letter-spacing: 0;
 	}
 }
+
 .title--about::after {
-	margin-top: 36px;
-	margin-bottom: 45px;
+	display: block;
+	content: '';
+	width: 60px;
+	height: 4px;
+	background-color: $hover-text-color;
+	margin: 36px auto 45px;
 }

@@ -3,6 +3,9 @@
    License: none (public domain)
 */
 
+@use '../utils/variables' as *;
+@use '../utils/fonts' as *;
+
 html,
 body,
 div,
@@ -131,4 +134,10 @@ q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+use {
+	fill: $navigation-text-color;
+}
+use:hover {
+	fill: $hover-text-color;
 }

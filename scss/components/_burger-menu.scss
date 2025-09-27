@@ -9,43 +9,13 @@
 	z-index: 2;
 }
 
-.menu__button span {
-	transform: translate(-50%, -50%);
-	height: 2px;
-	transition: all 0.5s;
-	position: absolute;
-	background-color: #222222;
-	width: 30px;
-	top: 50%;
-	left: 50%;
-}
-
-.menu__button span:nth-of-type(2) {
-	top: calc(50% - 5px);
-}
-.menu__button span:nth-of-type(3) {
-	top: calc(50% + 5px);
-}
-
-.menu__button.active span:nth-of-type(1) {
-	display: none;
-}
-.menu__button.active span:nth-of-type(2) {
-	top: 50%;
-	transform: translate(-50%, 0%) rotate(45deg);
-}
-.menu__button.active span:nth-of-type(3) {
-	top: 50%;
-	transform: translate(-50%, 0%) rotate(-45deg);
-}
-
 .burger-menu {
 	height: 100%;
 	transition: transform 0.5s;
 	padding: 15px;
 	transform: translateX(-100%);
 	position: fixed;
-	background-color: $navigation-text-color;
+	background-color: #fff;
 	top: 0;
 	width: 100%;
 	left: 0;
@@ -90,4 +60,88 @@
 .page.blur {
 	display: none;
 	pointer-events: none;
+}
+.close-burger-menu {
+	background: none;
+	border: none;
+	font-size: 30px;
+}
+
+.burger-menu__close {
+	display: flex;
+	justify-content: end;
+}
+.menu-logo__link {
+	color: (149, 225, 211, 1);
+}
+
+.burger__logo {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	text-align: center;
+	font-size: 50px;
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+}
+
+.menu__link {
+	letter-spacing: 0;
+	line-height: auto;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: $navigation-text-color;
+	font-size: 30px;
+
+	&:hover {
+		border-color: $hover-text-color;
+		padding-bottom: 10px;
+		color: $hover-text-color;
+		border-bottom: 3px solid;
+	}
+}
+
+.burger-menu__item {
+	padding-bottom: 40px;
+}
+
+.burger-menu__logo {
+	font-size: 50px;
+	font-weight: 700;
+	width: 100%;
+}
+
+.burger__logo {
+	color: $navigation-text-color;
+	text-align: center;
+}
+.burger__logo--animation {
+	font-weight: bold;
+	color: $navigation-text-color;
+
+	text-shadow: 0 0 5px $navigation-text-color, 0 0 1px $navigation-text-color,
+		0 0 2px $navigation-text-color, 0 0 3px $navigation-text-color,
+		0 0 5px $navigation-text-color, 0 0 8px $navigation-text-color;
+
+	animation: glowPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+	0% {
+		text-shadow: 0 0 1px $navigation-text-color, 0 0 2px $navigation-text-color,
+			0 0 3px $navigation-text-color, 0 0 5px $navigation-text-color,
+			0 0 7px $navigation-text-color, 0 0 10px $navigation-text-color;
+	}
+	100% {
+		text-shadow: 0 0 2px $navigation-text-color, 0 0 4px $navigation-text-color,
+			0 0 6px $navigation-text-color, 0 0 8px $navigation-text-color,
+			0 0 10px $navigation-text-color, 0 0 15px $navigation-text-color;
+	}
+}
+
+@media (min-width: 768px) {
+	.burger-menu {
+		display: none;
+	}
 }
