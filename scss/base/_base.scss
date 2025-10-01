@@ -20,37 +20,30 @@ body {
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 15px;
 }
 
 .title {
-	font-weight: 700;
-	line-height: 100%;
 	color: $title-color;
-	font-variant: small-caps;
-	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
 	font-size: 30px;
-	letter-spacing: 0%;
+	text-align: center;
 
 	&::after {
-		width: 60px;
-		content: '';
-		background-color: $hover-text-color;
 		display: block;
+		content: '';
+		width: 60px;
 		height: 4px;
-		margin: 0 auto;
+		background-color: $hover-text-color;
+		margin: 40px auto 65px;
 	}
 }
 
 .subtitle {
-	text-align: center;
-	line-height: 100%;
-	font-weight: 400;
-	padding-bottom: 20px;
 	color: $title-color;
-	letter-spacing: 0%;
 	font-family: 'Kaushan Script', sans-serif;
 	font-size: 24px;
+	text-align: center;
 }
 
 .burger-menu__button {

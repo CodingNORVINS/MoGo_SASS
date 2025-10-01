@@ -1,6 +1,7 @@
 @use '../utils/variables' as *;
 @use '../utils/fonts' as *;
 
+
 .header {
 	padding-top: 17px;
 	padding-bottom: 10px;
@@ -14,30 +15,28 @@
 	&__list {
 		display: flex;
 		gap: 55px;
+		margin-top: 15px;
 	}
 
 	&__link {
-		letter-spacing: 0;
-		line-height: auto;
-		font-weight: 400;
-		text-transform: uppercase;
-		color: $navigation-text-color;
+		color: #95e1d3;
 		font-size: 14px;
+		text-transform: uppercase;
 
 		&:hover {
-			border-color: $hover-text-color;
+			color: #f38181;
+			border-bottom: 3px solid #f38181;
 			padding-bottom: 10px;
-			color: $hover-text-color;
-			border-bottom: 3px solid;
 		}
 	}
 
 	&__logo {
-		letter-spacing: 0%;
 		color: $navigation-text-color;
 		font-weight: 700;
 		font-size: 30px;
 		line-height: 100%;
+		height: 33px;
+		margin-bottom: 12px;
 	}
 }
 

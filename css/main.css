@@ -163,36 +163,29 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 .title {
-  font-weight: 700;
-  line-height: 100%;
   color: rgb(51, 51, 51);
-  font-variant: small-caps;
-  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
   font-size: 30px;
-  letter-spacing: 0%;
+  text-align: center;
 }
 .title::after {
-  width: 60px;
-  content: "";
-  background-color: rgb(243, 129, 129);
   display: block;
+  content: "";
+  width: 60px;
   height: 4px;
-  margin: 0 auto;
+  background-color: rgb(243, 129, 129);
+  margin: 40px auto 65px;
 }
 
 .subtitle {
-  text-align: center;
-  line-height: 100%;
-  font-weight: 400;
-  padding-bottom: 20px;
   color: rgb(51, 51, 51);
-  letter-spacing: 0%;
   font-family: "Kaushan Script", sans-serif;
   font-size: 24px;
+  text-align: center;
 }
 
 .burger-menu__button {
@@ -215,120 +208,110 @@ body {
   padding-bottom: 10px;
 }
 .footer__container {
+  padding-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-top-style: solid;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 10px;
-  border-top-color: rgb(182, 182, 182);
-  border-top-width: 1px;
+  border-top: 1px solid rgb(182, 182, 182);
 }
 .footer__description {
   color: rgb(0, 0, 0);
 }
 .footer__link {
   color: rgb(243, 129, 129);
+  font-size: 14px;
 }
 .footer__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: "Roboto", sans-serif;
 }
 .footer__input {
-  font-style: italic;
-  border-width: 1px;
-  font-family: "Roboto", sans-serif;
-  line-height: auto;
-  border-color: rgb(182, 182, 182);
   color: rgb(182, 182, 182);
-  padding: 12px 0px 11px 10px;
-  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
   font-size: 14px;
-  letter-spacing: 0;
+  font-weight: 300;
+  border-width: 1px;
+  border-color: rgb(182, 182, 182);
   border-style: solid;
+  padding: 12px 10px 11px 10px;
   width: 230px;
+  height: 40px;
   border-right: none;
 }
 .footer__button {
-  font-size: 14px;
-  padding: 11px 38px 12px 38px;
-  border-width: 0;
-  color: rgb(255, 255, 255);
-  font-weight: 700;
   font-variant: small-caps;
-  line-height: auto;
-  letter-spacing: 0;
+  font-weight: 700;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
   background-color: rgb(149, 225, 211);
+  border-width: 0;
+  width: 150px;
+  height: 40px;
 }
 
 .service {
   padding-top: 68px;
-  padding-bottom: 100px;
-}
-.service__container {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 .service__wrapper {
   max-width: 290px;
 }
 .service__list {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  row-gap: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 60px;
-     -moz-column-gap: 60px;
-          column-gap: 60px;
-  row-gap: 100px;
+  -webkit-column-gap: 70px;
+     -moz-column-gap: 70px;
+          column-gap: 70px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .service__item {
-  max-width: 330px;
+  -ms-flex-preferred-size: calc((100% - 140px) / 3);
+      flex-basis: calc((100% - 140px) / 3);
+  gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .service__article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 20px;
 }
 .service__title {
-  font-weight: 400;
-  padding: 0 0 20px 20px;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 20px;
   color: rgb(51, 51, 51);
-  line-height: auto;
-  font-size: 14px;
-  font-variant: small-caps;
-  letter-spacing: 0;
+  font-size: 14px !important;
+  text-transform: uppercase;
 }
 .service__description {
-  padding-left: 19px;
-  font-family: "Roboto", sans-serif;
   color: rgb(182, 182, 182);
-  line-height: 22px;
-  font-weight: 400;
-  letter-spacing: 0;
   font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.14;
 }
 .service__icon {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 37px;
+  fill: rgb(149, 225, 211);
   height: 37px;
+}
+
+.title--service {
+  padding-top: 20px;
 }
 
 .title--service::after {
@@ -356,27 +339,25 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 55px;
+  margin-top: 15px;
 }
 .header__link {
-  letter-spacing: 0;
-  line-height: auto;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: rgb(149, 225, 211);
+  color: #95e1d3;
   font-size: 14px;
+  text-transform: uppercase;
 }
 .header__link:hover {
-  border-color: rgb(243, 129, 129);
+  color: #f38181;
+  border-bottom: 3px solid #f38181;
   padding-bottom: 10px;
-  color: rgb(243, 129, 129);
-  border-bottom: 3px solid;
 }
 .header__logo {
-  letter-spacing: 0%;
   color: rgb(149, 225, 211);
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
+  height: 33px;
+  margin-bottom: 12px;
 }
 
 @media (max-width: 768px) {
@@ -557,14 +538,14 @@ body {
   text-align: center;
   padding-bottom: 80px;
 }
+.about__subtitle {
+  padding-top: 100px;
+}
 .about__description {
-  font-size: 15px;
-  line-height: 1.6;
   padding: 0 48px 27px;
-  font-weight: 400;
   color: rgb(182, 182, 182);
-  letter-spacing: 0;
   font-family: "Roboto", sans-serif;
+  font-size: 15px;
 }
 .about__list {
   display: -webkit-box;
@@ -572,7 +553,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 15px;
+  gap: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -621,23 +602,20 @@ body {
   letter-spacing: 0;
 }
 .about__role {
-  font-style: italic;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 1.4;
-  color: rgb(182, 182, 182);
   font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  font-style: italic;
+  color: rgb(182, 182, 182);
   margin: 0;
-  letter-spacing: 0;
 }
 
-.title--about::after {
-  display: block;
-  content: "";
-  width: 60px;
-  height: 4px;
-  background-color: rgb(243, 129, 129);
-  margin: 36px auto 45px;
+.title--about {
+  padding-top: 17px;
+  font-size: 30px;
+  font-weight: 700;
+  font-variant: small-caps;
+  color: rgb(51, 51, 51);
 }
 
 @media (max-width: 393px) {
