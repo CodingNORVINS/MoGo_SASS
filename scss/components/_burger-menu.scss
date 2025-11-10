@@ -15,7 +15,6 @@
 	padding: 15px;
 	transform: translateX(-100%);
 	position: fixed;
-	background-color: #fff;
 	top: 0;
 	width: 100%;
 	left: 0;
@@ -88,7 +87,6 @@
 
 .menu__link {
 	letter-spacing: 0;
-	line-height: auto;
 	font-weight: 400;
 	text-transform: uppercase;
 	color: $navigation-text-color;
