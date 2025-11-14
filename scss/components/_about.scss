@@ -88,11 +88,11 @@
 	color: $title-color;
 }
 
-// .title--about::after {
-// 	display: block;
-// 	content: '';
-// 	width: 60px;
-// 	height: 4px;
-// 	background-color: $hover-text-color;
-// 	margin: 36px auto 45px;
-// }
+.title--about::after {
+	display: block;
+	content: '';
+	width: 60px;
+	height: 4px;
+	background-color: $hover-text-color;
+	margin: 36px auto 45px;
+}

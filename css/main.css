@@ -178,7 +178,6 @@ body {
   width: 60px;
   height: 4px;
   background-color: rgb(243, 129, 129);
-  margin: 40px auto 65px;
 }
 
 .subtitle {
@@ -314,8 +313,12 @@ body {
 }
 
 .title--service::after {
-  margin-top: 40px;
-  margin-bottom: 65px;
+  display: block;
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: rgb(243, 129, 129);
+  margin: 40px auto 65px;
 }
 
 .header {
@@ -606,6 +609,15 @@ body {
   font-weight: 700;
   font-variant: small-caps;
   color: rgb(51, 51, 51);
+}
+
+.title--about::after {
+  display: block;
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: rgb(243, 129, 129);
+  margin: 36px auto 45px;
 }
 
 @media (max-width: 393px) {
